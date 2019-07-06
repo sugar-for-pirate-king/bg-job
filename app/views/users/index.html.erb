@@ -1,0 +1,16 @@
+<%= link_to 'Create 100 users here', users_path, method: :post %>
+
+<table border="1">
+  <tr>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Phone number</td>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.name %></td>
+      <td><%= user.phone_number %></td>
+    </tr>
+  <% end %>
+</table>
